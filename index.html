@@ -6,48 +6,117 @@
     <title>Spiegelung</title>
 
     <!-- STYLES -->
+    <link rel="stylesheet" href="juxtapose.css">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
 </head>
 <body>
     <!-- CONTENT -->
 
 
     <main>
+
+      <section id="outro">
+     <div id="textblock"><h1>Spiegelung der Beteiligung</h1>
+        <p>Vielen Dank an Teilnahme, anbei Spiegelung text hier (Christian?)</p>
+      </div>
+    </section>
+
         <section id="scrolly">
             <article>
               <div class="step" data-step="one">
-                <p>Das Beteilifungsformat hat 60 Beteiligungen gehabt</p>
+                <p>Insgesamt haben 55 Menschen an dem Beteiligungsformat teilgenommen und ihre Meinung kundgetan. </p>
               </div>
               <div class="step" data-step="two">
-                <p>38 dieser Beteiligungen waren positiv, 17 negativ </p>
+                <p> Von den 55 Teilnehmern haben wir insgesamt 38 Bemerkungen als <span id="pos">positiv</span> gegenüber dem Konzept vermerkt und 15 <span id="neg">negativ.</span> </p>
               </div>
               <div class="step" data-step="three">
-                <p>23 der postiven hatten keine Bemerkungen, 15 der positiven konnten konstruktive kritik anbringen. <br>
-                  4 der negativen usw usf </p>
+                <p>23 der 38 positiven Beteiligungen hatten keine speziellen Kommentare und fanden den Entwurf <span id="pos">gut.</span> Die 15 anderen fanden das grundlegende Konzept gut, konnten jedoch <span id="pos-mid">konstruktive Kritik</span> anbringen.
+                 <br><br>
+                 4 der insgesamt 16 negativen Kommentare konnten mit <span id="neg-mid">einzelnen Elementen des Entwurfs nichts anfangen,</span> die anderen 12 waren nicht <span id="neg">überzeugt vom Konzept.</span>  </p>
               </div>
             </article>
-    
 
-            <div id="tooltip"></div>
+
 
             <figure>
-              <p>Hover über die Kästchen um Kommentare zu lesen</p>
+              <div id="tooltip"></div>
+
             </figure>
           </section>
     
           <section id="outro">
-              VORHER NACHHER VERGLEICHE (ca.3 Scrolls)
+            <p id="desc">Hier steht ein kleiner Erläuterungstext</p>
+              <div class="juxtapose" data-startingposition="35%" data-mode="horizontal">
+                <img class="left" src="vorher_a.jpg" data-label="vorher" alt="alt-description" />
+                <img class="right" src="nachher_a.jpg" data-label="nachher" alt="alt-description" />
           </section>
 
+
+
           <section id="outro">
-Finale Entwürfe (ca. 3 scrolls horizontal)
+            <p id="desc">Hier steht ein kleiner Erläuterungstext</p>
+
+            <div class="juxtapose" data-startingposition="55%" data-mode="horizontal">
+              <img class="left" src="vorher_b.jpg" data-label="vorher" alt="alt-description" />
+              <img class="right" src="nachher_b.jpg" data-label="nachher" alt="alt-description" />
+          </div>
         </section>
+
+        <section id="outro">
+          <p id="desc">Hier steht ein kleiner Erläuterungstext</p>
+          <div class="juxtapose" data-startingposition="25%" data-mode="horizontal">
+            <img class="left" src="vorher_c.jpg" data-label="vorher" alt="alt-description" />
+            <img class="right" src="nachher_c.jpg" data-label="nachher" alt="alt-description" />
+        </div>
+      </section>
+
+
+        <div class="wrapper" id="js-wrapper">
+          <div class="articles" id="js-slideContainer">
+            <article class="article">
+              <span class="articleTitle" id="title2"><b>Logowelten:</b></br> Logos müssen heute in mannigfachen Umgebungen funktionieren. Konzipiert wurden verschiedene Aggregatzustände (von oben nach unten): </br> <b>1)</b> Signet (z.b für Favicons in der Browserleiste)</br> <b>2)</b> Signet mit Kürzel </br><b>3)</b> Signet mit ausgeschriebenen Namen </br><b>4)</b> Wortmarke mit eingearbeiteten Signets    </span>
+              <img src="a.jpg" alt="Konzept" width="auto" height="100%" />
+  
+            </article>
+            <article class="article">
+              <span class="articleTitle" id="title2"><b>Logowelten (englische Version):</b></br> Auch die englische Version kann nach gleichem Prinzip gesetzt werden.</span>
+              <img src="b.jpg" alt="Konzept" width="auto" height="100%" />
+  
+            </article>
+            <article class="article">
+              <span class="articleTitle" id="title3">Verschiedene Farbvarianten und Visitenkarten</span>
+              <img src="c.jpg" alt="Konzept" width="auto" height="100%" />
+  
+            </article>
+            <article class="article">
+              <span class="articleTitle" id="title4">Erste Entwürfe von Buchcovern </span>
+              <img src="d.jpg" alt="Konzept" width="auto" height="100%" />
+  
+            </article>
+            <article class="article">
+              <span class="articleTitle" id="title5">Erste Entwürfen von Urkunden</span>
+              <img src="e.jpg" alt="Konzept" width="auto" height="100%" />
+  
+            </article>
+          </div>
+        </div>
     </main>
 
     <!-- libraries -->
     <script src="//d3js.org/d3.v4.min.js"></script>
     <script src="https://unpkg.com/intersection-observer"></script>
     <script src="https://unpkg.com/scrollama"></script>
+    <script src='juxtapose.js'></script>
+
+    <script src="  https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>

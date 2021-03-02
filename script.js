@@ -87,12 +87,12 @@ d3.csv("final_data_a.csv", function(data) {
 
   // TOOLTIP STYLING
   var Tooltip = d3.select("#tooltip")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("background-color", "white")
 
-    .style("padding", "5px")
+  .style("padding", "5px")
 
   // MOUSEOVER FUNCTIONALITIES
   var mouseover = function(d) {
@@ -164,3 +164,140 @@ function stepTwo() {
       svg.selectAll(".myRects")
       .transition().duration(1500)
       .style("fill", function(d) { return d.step3_color })}
+
+
+
+
+
+
+      /////OLD
+      TweenLite.defaultEase = Linear.easeNone;
+var titles = document.querySelectorAll(".articleTitle");
+var controllerb = new ScrollMagic.Controller();
+var tl = new TimelineMax();
+
+// create timeline
+// this could also be created in a loop
+tl.to("#js-slideContainer", 1, {xPercent: -20}, "label1");
+tl.from(titles[1], 0.5, {opacity:0}, "label1+=0.5");
+tl.to("#js-slideContainer", 1, {xPercent: -40}, "label2");
+tl.from(titles[2], 0.5, {opacity:0}, "label2+=0.5");
+tl.to("#js-slideContainer", 1, {xPercent: -60}, "label3");
+tl.from(titles[3], 0.5, {opacity:0}, "label3+=0.5");
+tl.to("#js-slideContainer", 1, {xPercent: -80}, "label4");
+tl.from(titles[4], 0.5, {opacity:0}, "label4+=0.5");
+
+
+new ScrollMagic.Scene({
+  triggerElement: "#js-wrapper",
+  triggerHook: "onLeave",
+  duration: "400%"
+})
+  .setPin("#js-wrapper")
+  .setTween(tl)
+  .addIndicators({
+    colorTrigger: "white",
+    colorStart: "white",
+    colorEnd: "white",
+  })
+  .addTo(controllerb);
+
+
+      $(function () {
+        // wait for document ready
+        // init
+        var controller = new ScrollMagic.Controller({
+          globalSceneOptions: {
+            triggerHook: "onLeave",
+            duration: "400%", // this works just fine with duration 0 as well
+            // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
+            // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
+          },
+        });
+
+        // get all slides
+        var slides = document.querySelectorAll("section.panel");
+
+        // create scene for every slide
+        for (var i = 0; i < slides.length; i++) {
+          new ScrollMagic.Scene({
+            triggerElement: slides[i],
+          })
+            .setPin(slides[i], { pushFollowers: false })
+            .addTo(controller);
+        }
+      });
+
+      // CHANGE CLASS ON SCROLL
+      /*       new ScrollMagic.Scene({triggerElement: ".third"})
+					.setClassToggle("#vid", "active") // add class toggle
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller); */
+
+      //STICKY ELEMENT
+
+      $(function () {
+        // wait for document ready
+        // build scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger1",
+          duration: 500,
+        })
+          .setPin("#pin1")
+          .addTo(controller);
+      });
+
+      $(function () {
+        // wait for document ready
+        // build scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger2",
+          duration: 1000,
+        })
+          .setPin("#pin2")
+          .addTo(controller);
+      });
+
+      $(function () {
+        // wait for document ready
+        // build scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger3",
+          duration: 500,
+        })
+          .setPin("#pin3")
+          .addTo(controller);
+      });
+
+      $(function () {
+        // wait for document ready
+        // build scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger4",
+          duration: 500,
+        })
+          .setPin("#pin4")
+          .addTo(controller);
+      });
+
+      $(function () {
+        // wait for document ready
+        // build scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger5",
+          duration: 500,
+        })
+          .setPin("#pin5")
+          .addTo(controller);
+      });
+
+      $(function () {
+        // wait for document ready
+        // build scene
+        var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger6",
+          duration: 500,
+        })
+          .setPin("#pin6")
+          .addTo(controller);
+      });

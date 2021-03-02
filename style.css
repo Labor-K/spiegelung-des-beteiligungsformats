@@ -1,22 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700;900&display=swap");
+
+
 
 body {
     margin: 0;
-    font-family: sans-serif;
-}
+    font-family: "Titillium Web", sans-serif;
+  }
 
 #outro {
     display: flex;
+    white-space: pre-wrap;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
     font-size: 20px;
-    background: rgb(230, 230, 230);
+    background-color: #f3f3f3;
 }
 
 
+
+#pos{
+  color:#018571
+
+}
+
+#pos-mid{
+  color:#80cdc1
+
+}
+
+
+#neg{
+ color: #a6611a
+  }
+
+
+#neg-mid{
+  color: #dfc27d;
+
+}
+
+#textblock{
+  display: inline-block;
+}
+
 #tooltip{
-  position: fixed
+  position: absolute;
+  margin-left:350px;
+  width: 360px;
 }
 
 /* Scrollama sticky side example styles with some modifications https://github.com/russellgoldenberg/scrollama/blob/master/docs/sticky-side/index.html */
@@ -50,6 +82,31 @@ body {
     align-items: center;
   }
 
+#figurediv{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  width: 100%;
+  height: 800px;
+  margin: 0;
+  /* background-color: #8a8a8a; */
+  z-index: 0;
+  flex-basis: 67%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#desc{
+  margin-right: 15%;
+  width: 150px;
+  align-items: left;
+}
+
+svg{
+  margin-right: 35%;
+}
+
   .step {
     margin: 0 auto 2rem auto;
     display: flex;
@@ -58,7 +115,6 @@ body {
     align-items: center;
     height: 100vh;
     /* background-color: #3b3b3b; */
-    background-color: rgb(233, 233, 233);
   }
 
   .step:last-child {
@@ -69,4 +125,233 @@ body {
     /* background-color: rgb(222, 212, 224);  */
     color: #3b3b3b;
   }
+
+
+
+  .knightlab-logo{
+    display: none !important;
+  }
+
+  .juxtapose-name{
+    display: none !important;
+  
+  }
+
+  .jx-knightlab{
+    display: none !important;
+  }
+
+
+
+
+  /* OLD */
+
+
+
+
+
+  .panel.bordeaux {
+    margin-bottom: 400px;
+    background-color: orange;
+  }
+  .panel.blue {
+    background-color: green;
+  }
+
+  b {
+font-weight: 700;      }
+
+  /* _________________________ */
+
+
+  h1 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-family: "IBM Plex Sans", sans-serif;
+    width: 400px;
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  /* ________PANELS______________ */
+
+  .panel {
+    height: 100vh;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  .panel.intro {
+    background-color: white;
+  }
+  .panel.second {
+    margin-bottom: 400px;
+    background-color: white;
+  }
+
+  .panel.third {
+    background-color: white;
+  }
+  /* ________IDS______________ */
+
+  #container {
+    margin-left: 5%;
+    position: relative;
+  }
+
+  #bodytext {
+    font-size: 18px !important;
+    width: 60vw;
+  }
+
+  .fullscreen-bg {
+    /* position: fixed; */
+    top: 1%;
+    right: 1%;
+    bottom: 1%;
+    left: 1%;
+    overflow: hidden;
+    z-index: -100;
+  }
+
+  .fullscreen-bg__video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+  }
+
+  .active {
+    position: absolute !important;
+    display: none !important;
+  }
+
+  #logo {
+    vertical-align: top;
+    bottom: 300px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  #explain {
+    position: relative;
+    bottom: 235px;
+    width: 340px;
+    padding-left: 80% !important;      
+}
+
+#final-explain{
+    vertical-align: top;
+    bottom: 300px;
+    margin: auto;
+    width: 25%;
+    padding: 10px;
+}
+  /* ________PINS AND TRIGGERS______________ */
+
+  #trigger1 {
+    z-index: 999999;
+  }
+
+  #pin1 {
+    margin-left: 75vw;
+    vertical-align: top;
+  }
+
+
+  #pin2 {
+    vertical-align: top;
+    bottom: 300px;
+    margin-left: 5%;
+    width: 50%;
+  }
+
+  #trigger3 {
+    vertical-align: top;
+  }
+
+  #pin3 {
+    vertical-align: top;
+    bottom: 300px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+  #pin4 {
+    vertical-align: top;
+    bottom: 300px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  #pin5 {
+    vertical-align: top;
+    bottom: 300px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  #pin6 {
+    vertical-align: top;
+    bottom: 300px;
+    margin: auto;
+    width: 100vw;
+  }
+
+
+  /* ________Horizontal articles______________ */
+
+/*   body,
+html {
+height: 100%;
+padding: 0;
+margin: 0;
+}  */
+
+.wrapper {
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+}
+
+.article {
+height: 100%;
+width: calc(100% / 5);
+float: left;
+position: relative;
+display: flex;
+
+}
+
+.articles {
+width: 500%;
+height: 100%;
+}
+.articleTitle {
+font-size: 15px;
+color: black;
+z-index: 99999999;
+position: absolute;
+margin-left: 5%;
+margin-top: 10px;
+width: 200px;
+
+}
 
